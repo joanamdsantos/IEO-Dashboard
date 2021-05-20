@@ -24,7 +24,7 @@ The scenarios evaluated consist in the variation of oil prices and economic grow
 The Reference case reflects current trends and relationships among supply, demand, and prices in the future. 
 It is a reasonable baseline case to compare with cases that include alternative assumptions about economic drivers, policy changes, or other determinants of the energy system to estimate the potential impact of these assumptions.
  
-The International Energy Outlook assessment for 2019 and key takeaways from the reference case can be accessed at the [EIA's IEO site](https://www.eia.gov/outlooks/archive/ieo19/">EIA IEO 2019 website).
+The International Energy Outlook assessment for 2019 and key takeaways from the reference case can be accessed at the [EIA's IEO site](https://www.eia.gov/outlooks/archive/ieo19/).
 
 ## The project
 
