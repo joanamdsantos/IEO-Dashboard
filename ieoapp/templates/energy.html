@@ -1,0 +1,54 @@
+{%extends "layout.html"%} {% block content %}
+<!-- Page Header-->
+<header class="page-header">
+    <div class="container-fluid">
+        <h2 class="no-margin-bottom">International Energy Outlook 2019</h2>
+    </div>
+</header>
+<!--intro card-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mt-3 mb-3">
+                <h5 class="card-header">Dashboard </h5>
+                <div class="card-body">
+                    <h6 class="card-title text-muted"></h6>
+                    <small class="card-subtitle "> <br>The U.S. Energy Information Administration’s &lpar;EIA&rpar; International Energy Outlook &lpar;IEO&rpar; presents an analysis of long-term world energy markets in sixteen regions through 2050. Reference case projections are modeled
+                                projections under various alternative assumptions instead of predictions of what is most likely to happen. <br> This Dashboard aims to present the major findings regarding macroeconomics, energy consumption and carbon emissions
+                                for the different modelled scenarios.
+                            </small>
+                </div>
+                <img src="/static/img/ieo_img.png" alt="..." class="img-fluid mb-4 ml-2">
+                <div class="card-body">
+                    <small class="card-text">EIA develops the IEO using the World Energy Projection System Plus (WEPS+), an integrated economic model that captures long-term relationships among energy supply, demand, and prices across regional markets under various assumptions.
+                                <br> According to EIA the Energy market projections are uncertain because the events that shape future developments in technology, demographic changes, economic trends, and resource availability that drive energy use are fluid.
+                                <br> The scenarios evaluated consist in the variation of oil prices and economic growth in comparison to the reference case.<br><br>
+                                <ul class="list-unstyled">
+                                    <li class="text-info">Economic growth:</li><br>
+                                    <ul>
+                                        <li>3.7% per year, High Economic Growth case</li>
+                                        <li>3.0% per year, Reference case</li>
+                                        <li>2.4% per year, Low Economic Growth case</li>
+                                    </ul>
+
+                                    <br>
+                                    <ul class="list-unstyled">
+                                        <li class="text-info">Oil prices:</li><br><br>
+                                        <ul>
+                                            <li>$185/barrel, High Oil Price case</li>
+                                            <li>$100/barrel, Reference case</li>
+                                            <li>45/barrel, Low Oil Price case</li>
+                                        </ul>
+
+                                    </ul>
+                                </ul>
+                                <br> The Reference case reflects current trends and relationships among supply, demand, and prices in the future. It is a reasonable baseline case to compare with cases that include alternative assumptions about economic
+                                        drivers, policy changes, or other determinants of the energy system to estimate the potential impact of these assumptions.<br><br>The International Energy Outlook assessment for 2019 and key takeaways from the reference case can be accessed at the  <a class="text-info" href="https://www.eia.gov/outlooks/archive/ieo19/">EIA IEO 2019 website</a>.
+                            </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

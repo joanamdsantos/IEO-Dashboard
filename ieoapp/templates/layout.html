@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="IEO 2019 Dashboard">
+    <meta name="author" content="Joana Martins dos Santos">
+
+
+    <title>IEO 2019 Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+
+
+    <!--import script files needed for plotly and bootstrap-->
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+    <!-- Lux template -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/lux/bootstrap.min.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="../static/css/style.sea.css" id="theme-stylesheet">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <!--Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!--Fontawesome -->
+    <script src="https://use.fontawesome.com/8aada1b845.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+
+    <!-- Custom styles for this template -->
+    <!--<link href="dashboard.css" rel="stylesheet">-->
+
+</head>
+
+<body>
+    <div class="page">
+        <!-- Main Navbar-->
+        <header class="header">
+            <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand pull-left hidden-sm hidden-xs" href="https://www.eia.gov/outlooks/archive/ieo19/">
+                        <h5>International Energy Outlook 2019 Dashboard</h5>
+                    </a>
+                    <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="#navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                    <div class="navbar-collapse collapse navbarColor02" id="navbarColor02">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="https://www.udacity.com">
+                                    <p>Udacity</p>
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.eia.gov/">
+                                    <p>U.S. E.I.A.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="page-content d-flex align-items-stretch">
+            <!-- Side Navbar -->
+            <nav class="side-navbar">
+                <!-- Sidebar Navigation Menus-->
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="{{ url_for('index') }}"> <i class="fas fa-th-large mr-3 text-primary fa-fw"></i>Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('macro') }}"> <i class="fas fa-users mr-3 text-primary fa-fw"></i>Macro</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('power') }}"> <i class="fas fa-plug mr-3 text-primary fa-fw"></i>Power</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('energy') }}"> <i class="fas fa-power-off mr-3 text-primary fa-fw"></i>Energy</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('carbon') }}"> <i class="fas fa-globe mr-3 text-primary fa-fw"></i>Carbon</a>
+                    </li>
+                    <li><a class="nav-link" href="{{ url_for('references') }}"><i class="fas fa-map mr-3 text-primary fa-fw"></i>References</a></li>
+                </ul>
+            </nav>
+            <div class="content-inner">
+
+                <!--content-->
+
+                {%block content%} {%endblock%}
+
+                <!--content-->
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="row">
+            <!-- Grid container -->
+            <div class="col-12">
+                <footer class="text-center">
+                    <!-- Grid container -->
+                    <div class="container p-0 pb-0">
+                        <section class="mt-4 mb-0">
+
+                            <!-- Twitter -->
+                            <a class="btn btn-outline-dark btn-floating m-1" href="https://twitter.com/JoanaMartinsSan" role="button"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+
+                            <!-- Linkedin -->
+                            <a class="btn btn-outline-dark btn-floating m-1" href="https://www.linkedin.com/in/joana-martins-dos-santos/" role="button"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+
+                            <!-- Github -->
+                            <a class="btn btn-outline-dark btn-floating m-1" href="https://github.com/joanamdsantos" role="button"><i class="fab fa-github" aria-hidden="false"></i></a>
+                        </section>
+
+                    </div>
+                    <!-- Section: Social media -->
+
+                    <!-- Grid container -->
+
+                    <!-- Copyright -->
+                    <div class="text-center mt-0 text-muted">
+                        <small>Developed by Joana Martins dos Santos, Udacity Data Science Nanodegree <br> © 2021 Copyright:
+        <a href="https://www.eia.gov/">U.S. Energy Information Administration<br><br></a></small>
+                    </div>
+                    <!-- Copyright -->
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <!--footer section-->
+    <div id="footer" class="container"></div>
+
+    <!-- Main File-->
+    <script src='../static/js/config.js'></script>
+    <script src="../static/js/front.js"></script>
+
+
+
+
+</body>
+
+</html>
